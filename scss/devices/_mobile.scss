@@ -1,0 +1,270 @@
+@media (min-width: 300px) {
+
+    %bg-pic {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header {
+        height: 80vh;
+        @extend %bg-pic;
+        background-image: url("/img/bg-header.jpg");
+
+        > section {
+            position: relative;
+            height: 100%;
+            background-color: $bgTransparent;
+        }
+
+        article {
+            color: white;
+            text-align: center;
+            height: 90%;
+            @include flexBox(column,5vh,center,center);
+
+            a {
+                color: $green;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        p, div {
+            width: 60%;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 36px;
+        }
+
+        span {
+            color: $blue;
+        }
+
+        div {
+            @include flexBox(
+                column,1px,center
+            );
+
+            > a {
+                width: 50%;
+                padding: 4%;
+                color: white;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            > a:first-child {
+                border: 2px solid white;
+            }
+
+            > a:last-child {
+                background-color: $blue;
+            }
+        }
+    }
+
+    nav {
+        height: 10%;
+        padding: 2%;
+        display: flex;
+        justify-content: right;
+        > ul {
+            display: none;
+        }
+    }
+
+    details {
+        width: 80%;
+        text-align: right;
+        position: relative;
+        > ul {
+            border: 1px solid white;
+            border-bottom: 0px solid white;
+            width: 100%;
+            position: absolute;
+            background-color: $bgTransparent;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+        }
+
+        a {
+            height: 100%;
+            width: 100%;
+            padding: 2%;
+            border-bottom: 1px solid white;
+            color: white;
+
+            &:hover {
+                font-weight: 800;
+                background-color: rgba(80,80,80,.9);
+            }
+        }
+    }
+
+    summary {
+        border: 1px solid white;
+        color: white;
+        padding: 5%;
+        box-shadow: rgba(245, 245, 245, 0.8) 0px 5px 15px;
+    }
+
+    .title-section {
+        text-align: center;
+        @include flexBox(
+            column,5vh,center,center
+        );
+
+        h2 {
+            font-weight: 200;
+            color: dimgray;
+            width: 70%;
+        }
+
+        a {
+            color: skyblue;
+        }
+
+        p {
+            color: gray;
+        }
+    }
+
+    .about {
+        padding-top: 20%;
+        > section:last-child {
+            background-color: gainsboro;
+            text-align: center;
+            padding: 10% 5%;
+            @include flexBox(
+                column,2vh,center,center
+            );
+        }
+
+        figure {
+            width: 60%;
+            padding: 5%;
+            background-color: white;
+            @include flexBox(
+                column,2vh,center,center
+            );
+        }
+
+        aside {
+            @include flexBox(
+                column,0,center,center
+            );
+            width: 10vh;
+            height: 10vh;
+            border-radius: 50%;
+            border: 1px solid $blue;
+        }
+
+        i {
+            font-size: 30px;
+        }
+    }
+
+    .gallery {
+        color: gray;
+
+        @include flexBox(
+            column, 5vh,center,center
+        );
+
+        figure {
+            padding: 1.5vh;
+            background-color: gainsboro;
+            @include flexBox(
+                column,2vh,center,center
+            );
+        }
+
+        figcaption {
+            @include flexBox(
+                column,10px,flex-start,left
+            );
+        }
+
+        aside {
+            width: 50vh;
+            height: 40vh;
+        }
+
+        h3 {
+            color: dimgray;
+            font-weight: 500;
+        }
+
+        figure:nth-child(1) > aside {
+            @extend %bg-pic;
+            background-image: url("/img/pic-20.jpg");
+        }
+
+        figure:nth-child(2) > aside {
+            @extend %bg-pic;
+            background-image: url("/img/pic-21.jpg");
+        }
+
+        figure:nth-child(3) > aside {
+            @extend %bg-pic;
+            background-image: url("/img/pic-22.jpg");
+        }
+
+        figure:nth-child(4) > aside {
+            @extend %bg-pic;
+            background-image: url("/img/pic-24.jpg");
+        }
+    }
+
+    .subscribe {
+        padding: 15% 10%;
+        row-gap: 5vh;
+        background-color: $blue;
+        color: white;
+        text-align: center;
+        align-items: center;
+
+        h2 {
+            text-transform: capitalize;
+            font-weight: 300;
+        }
+
+        form {
+            @include flexBox(column,1vh);
+            width: 90%;
+        }
+
+        input {
+            padding: 5%;
+            background-color: skyblue;
+            border: 0px none transparent;
+            color: white;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        [type="submit"] {
+            background-color: none;
+            border: 3px solid white;
+            text-transform: uppercase;
+            font-weight: 600;
+            &:hover {
+                background-color: white;
+                color: $blue;
+                border: 3px solid $blue;
+                transition: .4s;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

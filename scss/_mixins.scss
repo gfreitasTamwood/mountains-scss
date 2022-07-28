@@ -1,0 +1,12 @@
+@mixin flexBox (
+    $direction : column,
+    $rowGap : 0px,
+    $alignItems : flex-start,
+    $justify : left
+) {
+    display: flex;
+    flex-direction: $direction;
+    row-gap: $rowGap;
+    align-items: $alignItems;
+    justify-content: $justify;
+}
