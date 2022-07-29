@@ -69,6 +69,7 @@
             }
 
             > a:last-child {
+                border: 2px solid $blue;
                 background-color: $blue;
             }
         }
@@ -267,7 +268,7 @@
         input {
             width: 100%;
             padding: 5%;
-            background-color: skyblue;
+            background-color: lightskyblue;
             border: 0px none transparent;
             color: white;
         }
